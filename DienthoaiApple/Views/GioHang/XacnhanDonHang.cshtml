@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DienthoaiApple.Models.GioHang>
+@{
+    ViewBag.Title = "XacnhanDonhang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Vui lòng chọn hình thức thanh toán</h2>
+<div class="pull-right">
+
+    @using (Html.BeginForm("QRCode", "GioHang"))
+    {
+        <td><input type="submit" value="Ngân Hàng" class="btn btn-success" /></td>
+
+    }
+</div>
+
+<div class="pull-right">
+    @using (Html.BeginForm("Cash", "GioHang"))
+    {
+        <td><input type="submit" value="Tiền mặt" class="btn btn-success" /></td>
+    }
+
+</div>
+    <picture>
+        @Html.ActionLink("Về trang chủ", "Index", "Home")
+    </picture>
+

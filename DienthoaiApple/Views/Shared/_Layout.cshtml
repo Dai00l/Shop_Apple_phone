@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="header">
+        <img src="~/Content/Img/wallpaper.png" width="100%" height="300px" />
+    </div>
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="topnav">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+            <li>@Html.ActionLink("Giới thiệu", "About", "Home")</li>
+            <li>@Html.ActionLink("Thông tin liên hệ", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Sản phẩm", "ListDienthoai", "Dienthoai")</li>
+            <li>@Html.Partial("~/Views/GioHang/GioHangPartial.cshtml")</li>
+        </ul>
+
+        <div class="pull-right">
+            <img src="~/Content/Img/logo.jpg" width="auto" height="55px" />
+
+        </div>
+        @*<div class="pull-right">
+
+            <li>@Html.ActionLink("Đăng nhập", "Dangnhap", "User")</li>
+
+        </div>
+        <div class="pull-right">
+            <li>@Html.ActionLink("Đăng ký", "Dangky", "User")</li>
+        </div>*@
+    <div class=" pull-right">
+        
+        <ul id="navbar">
+            @if (Session["TaiKhoan"] == null)
+            {
+                <div class="pull-right">
+                    <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll  " style="margin: 10px;">
+                        <div class="dangky">
+                            <li>@Html.ActionLink("Đăng ký", "Dangky", "User")</li>
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="dangnhap ">
+                            <li>@Html.ActionLink("Đăng nhập", "Dangnhap", "User")</li>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+            else
+            {
+
+                <li>@Html.ActionLink("User", "Index", "Home", new { area = "" }, new { @class = "cusor text-dark text-decoration-underline" })</li>
+                <li>@Html.ActionLink("Log out", "Logout", "User", new { area = "" }, new { @class = "cusor text-dark  " })</li>
+
+            }
+        </ul>
+    </div>
+    </div>
+    
+
+
+    <div class="container body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <img src="~/Content/Img/bannerip12.jpg" width="100%" height="300px" />
+
+            <p>&copy; @DateTime.Now.Year - Copy by NguyenTheDai</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
+</body>
+
+
+
+</html>
+

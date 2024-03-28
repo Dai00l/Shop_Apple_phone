@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DienthoaiApple.Models.ChiTietDonHang>
+
+@{
+    ViewBag.Title = "QRCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mã QR thanh toán</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Ngân Hàng Vietinbank
+            <img src="~/Content/Img/z4228091230566_dd850c88fe3763262ff81ec600c42231.jpg" width="100%" height="350px" />
+        </th>
+        <th>
+            VNPay
+
+
+
+            <img src="~/Content/Img/z4228090669913_f3532e5ae20723842b02cbe2a0ece1cb.jpg" width="100%" height="500px" />
+        </th>
+        <th>
+            Ngân Hàng Bản Việt
+            <img src="~/Content/Img/z4228091738426_0b1de32bfa4576094df2eac8bfd7d647.jpg" width="100%" height="500px" />
+        </th>
+        <th>
+            MoMo
+            <img src="~/Content/Img/z4228089724563_472a857d2ec725b5c157a8d659edb00b.jpg"  width="100%" height="300px" />
+        </th>
+        <th></th>
+    </tr>
+    <h3>"Cảm ơn quý khách đã thanh toán đơn hàng bằng QR Code "</h3>
+    <h3>Chúng tôi sẽ giao hàng cho bạn sớm nhất có thể !</h3>
+    
+
+</table>
+<div class="pull-right">
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <td><input type="submit" value="Trang chủ" class="btn btn-success" /></td>
+    }
+</div>

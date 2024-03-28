@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DienthoaiApple.Models.GioHang>
+@{
+    ViewBag.Title = "Cash";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thanh Toán Tiền Mặt</h2>
+
+
+<table class="table">
+   
+    @using (Html.BeginForm("XacnhanDonHang", "GioHang"))
+    {
+
+
+
+        <h3> Quý khách vui lòng kiểm tra hàng trước khi thanh toán </h3>
+        <h3>Chúng tôi sẽ giao hàng cho bạn sớm nhất có thể !</h3>
+
+
+    }
+
+</table>
+
+
+<div class="pull-right">
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <td><input type="submit" value="Trang chủ" class="btn btn-success" /></td>
+    }
+</div>

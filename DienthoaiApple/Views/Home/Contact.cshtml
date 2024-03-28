@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Thông tin liên hệ";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    Hệ thống cửa hàng điện thoại uy tín toàn quốc<br />
+    Address : Dĩ an , Bình Dương<br />
+    <abbr title="Phone">Hotline:</abbr>
+    0889.22.08.02
+</address>
+<img src="~/Content/Img/themesapw.jpg" width="100%" height="450px"/>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:nguyenthedai2208@gmail.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:nuyenthedai2002@gmail.com">Marketing@example.com</a>
+</address>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

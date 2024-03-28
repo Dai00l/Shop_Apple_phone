@@ -1,0 +1,71 @@
+﻿@model DienthoaiApple.Models.Dienthoai
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Dienthoai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            Tên điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tendt)
+        </dd>
+
+        <dt>
+            Hình ảnh 
+        </dt>
+
+        <dd>
+            <img width="180px" height="auto" src="@Html.DisplayFor(model => model.hinhdt)" alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            Giá bán 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>
+            Ngày cập nhật
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số lượng tồn 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.madt }) |
+    @Html.ActionLink("Back to List", "ListDienThoai")
+</p>
+
+
+
